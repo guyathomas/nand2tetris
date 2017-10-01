@@ -31,5 +31,5 @@ CHIP Mux4Way {
     //Return 1 if sel = 11 && d = 1
     And3Way(a=sel[0], b=sel[1], c=d, out=fourthOut);
 
-    Or4Way(a=firstOut, b=secondOut, c=thirdOut, d=fourthOut, out=out);
+    Or4Way(a[0]=firstOut, a[1]=secondOut, a[2]=thirdOut, a[3]=fourthOut, out=out);
 }

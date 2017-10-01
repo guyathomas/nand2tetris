@@ -5,15 +5,15 @@
 
 /**
  * 4-way Or: 
- * out = (a or b or c or d)
+ * out = (a[0] or a[1] or a[2] or a[3])
  */
 
 CHIP Or4Way {
-    IN a, b, c, d;
+    IN a[4];
     OUT out;
 
     PARTS:
-    Or(a=a, b=b, out=temp1);
-    Or(a=temp1, b=c, out=temp2);
-    Or(a=temp2, b=d, out=out);
+    Or(a=a[0], b=a[1], out=temp1);
+    Or(a=temp1, b=a[2], out=temp2);
+    Or(a=temp2, b=a[3], out=out);
 }

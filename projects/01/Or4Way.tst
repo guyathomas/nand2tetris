@@ -6,39 +6,24 @@
 load Or4Way.hdl,
 output-file Or4Way.out,
 compare-to Or4Way.cmp,
-output-list a%B2.1.2 b%B2.1.2 c%B2.1.2 d%B2.1.2 out%B2.1.2;
+output-list a%B1.4.1 out%B2.1.2;
 
-set a 0,
-set b 0,
-set c 0,
-set d 0,
+set a %B0000,
 eval,
 output;
 
-set a 1,
-set b 1,
-set c 1,
-set d 1,
+set a %B1111,
 eval,
 output;
 
-set a 0,
-set b 0,
-set c 0,
-set d 1,
+set a %B0001,
 eval,
 output;
 
-set a 1,
-set b 0,
-set c 0,
-set d 0,
+set a %B1000,
 eval,
 output;
 
-set a 0,
-set b 0,
-set c 1,
-set d 0,
+set a %B0010,
 eval,
 output;
